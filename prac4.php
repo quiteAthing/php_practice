@@ -17,7 +17,7 @@
 	}
 	$result=$conn->query("select * from members where id=1");
 	echo "result ",$result->fetch();
-			echo (string)$conn,"<br>"
+			echo (string)$conn,"<br>";
 	
-	$conn->db=null;
+	#$conn->db=null;
 ?>
