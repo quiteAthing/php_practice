@@ -14,10 +14,10 @@
 		$rq=$result->fetch(PDO::FETCH_ASSOC);
 		
 		while($row = $result->fetch()) {
-			echo "id: " ,$row;
-		}
-		foreach($rq as $x){
-			echo "<br>",$x ; 
+			foreach($row as $af){
+					echo "id: " ,$af;
+			}
+			
 		}
 		
 	}
