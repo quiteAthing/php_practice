@@ -9,8 +9,8 @@
 	try{
 		$conn=new PDO("mysql:host=$host_name;dbname=$dbname",$username,$password);
 		$result=$conn->query("select * from members where id=1");
-		echo "result ",$result->fetch();
-		echo (string)$conn,"<br>";
+		echo "result ",(string)$result;
+		
 	}
 	catch(PDOException $e )
 	{
