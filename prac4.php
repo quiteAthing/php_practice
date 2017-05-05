@@ -4,7 +4,7 @@
 	$host_name="localhost";
 	$dbname="xblog";
 	$username="root";
-	$password="";
+	$password="phppractice";
 	
 	try{
 		$conn=new PDO('mysql:host=$host_name;dbname=$dbname',$username,$password);
