@@ -3,8 +3,8 @@
 	
 	$host_name="localhost";
 	$dbname="xblog";
-	$username="root";
-	$password="";
+	$username='root';
+	$password='';
 	
 	try{
 		$conn=new PDO('mysql:host=$host_name;dbname=$dbname',$username,$password);
