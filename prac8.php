@@ -22,7 +22,7 @@
 		
 		$pstmt->execute();
 		
-		$result = $conn->query("select * from articles");
+		$result = $conn->query("select title from articles");
 		
 		while($row = $result->fetch(PDO::FETCH_ASSOC)) {
 				echo "title: " ,$row["title"],"<br>";
