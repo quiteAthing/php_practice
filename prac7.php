@@ -11,9 +11,8 @@
 		$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 		
 		$result = $conn->query("select * from members");
-		$rq=$result->fetch(PDO::FETCH_ASSOC);
 		
-		while($row = $result->fetchAll()) {
+		while($row = $result->fetchAll(PDO::FETCH_ASSOC)) {
 			foreach($row as $af){
 					echo "id: " ,$af,"<br>";
 			}
