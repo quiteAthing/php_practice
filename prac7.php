@@ -13,7 +13,7 @@
 		$result = $conn->query("select * from members");
 		$rq=$result->fetch(PDO::FETCH_ASSOC);
 		
-		while($row = $result->fetch()) {
+		while($row = $result->fetchAll()) {
 			foreach($row as $af){
 					echo "id: " ,$af,"<br>";
 			}
