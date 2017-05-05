@@ -1,9 +1,9 @@
 <?php
 	echo "Hello";
 	
-	$host_name="localhost";
+	$host_name="127.0.0.1";
 	$dbname="xblog";
-	$username="root";
+	$username="prac";
 	$password="phppractice";
 	
 	try{
