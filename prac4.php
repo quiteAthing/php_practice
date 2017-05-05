@@ -8,8 +8,14 @@
 	
 	try{
 		$conn=new PDO("mysql:host=$host_name;dbname=$dbname",$username,$password);
-		$result=$conn->query("select * from members where id=1");
-		echo "result ",(string)$result->rowCount();
+		$stmt=$conn->prepare("select * from members where id=1");
+		$stmt->execute();
+		    // set the resulting array to associative
+		$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+		foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+			echo $v;
+		}
+		
 		
 	}
 	catch(PDOException $e )
