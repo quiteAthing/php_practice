@@ -15,7 +15,7 @@
 		
 	}
 	$result=$conn->query("select * from members where id=1");
-	echo "result ",$result;
+	echo "result ",$result->rowCount();
 	
 	$conn->db=null;
 ?>
