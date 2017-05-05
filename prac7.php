@@ -12,10 +12,8 @@
 		
 		$result = $conn->query("select * from members");
 		
-		while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-					echo "id: " ,(string)$row,"<br>";
-			
-			
+		while($row = $result->fetch()) {
+				echo "id: " ,$row,"<br>";
 		}
 		
 	}
