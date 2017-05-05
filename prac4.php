@@ -12,7 +12,7 @@
 	catch(PDOException $e )
 	{
 		echo "<br>",$e->getMessage();
-		echo (string)$conn,"<br>"
+		echo (string)$conn,"<br>";
 		
 	}
 	$result=$conn->query("select * from members where id=1");
