@@ -10,8 +10,9 @@
 		$conn=new PDO("mysql:host=$host_name;dbname=$dbname",$username,$password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 		$result = $conn->query("select * from members");
-		foreach($result->fetch() as $x){
-			echo <br>,$x;
+		$rq=$result->fetch()
+		foreach($rq as $x){
+			echo $x ; 
 		}
 		
 	}
