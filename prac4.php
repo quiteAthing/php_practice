@@ -9,11 +9,9 @@
 	try{
 		$conn=new PDO("mysql:host=$host_name;dbname=$dbname",$username,$password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-		$conn->setAttribute(PDO::FETCH_ASSOC);
 		
 		$result = $conn->query("select * from members");
-		$rq=$result->fetch();
-		echo "<br>aaaaaa   ",$rq->rowCount();
+		$rq=$result->fetch(PDO::FETCH_ASSOC);
 		foreach($rq as $x){
 			echo "<br>",$x ; 
 		}
