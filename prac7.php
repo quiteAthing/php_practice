@@ -15,7 +15,7 @@
 		
 		while($row = $result->fetch()) {
 			foreach($row as $af){
-					echo "id: " ,$af;
+					echo "id: " ,$af,"<br>";
 			}
 			
 		}
