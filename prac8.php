@@ -25,7 +25,7 @@
 		$result = $conn->query("select * from articles");
 		
 		while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-				echo "title: " ,)$row[title],"<br>";
+				echo "title: " ,)$row["title"],"<br>";
 		}
 		$conn->db=null;
 		
