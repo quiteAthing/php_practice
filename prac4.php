@@ -12,7 +12,7 @@
 		$result = $conn->query("select * from members");
 		$rq=$result->fetch();
 		foreach($rq as $x){
-			echo $x ; 
+			echo "<br>",$x ; 
 		}
 		
 	}
