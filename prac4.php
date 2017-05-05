@@ -18,8 +18,8 @@
 	}
 	catch(PDOException $e )
 	{
-		echo "<br>",$e->getMessage();
-		echo (string)$conn,"<br>";
+		echo "<br>abcd"a$e->getMessage();
+		#echo (string)$conn,"<br>";
 		
 	}
 	
