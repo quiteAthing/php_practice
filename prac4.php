@@ -8,18 +8,12 @@
 	
 	try{
 		$conn=new PDO('mysql:host=$host_name;dbname=$dbname',$username,$password);
-		$stmt=$conn->prepare("select * from members where id=1");
-		$stmt->execute();
-		    // set the resulting array to associative
-		$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-		$result->fetchAll();
-		
-		
+		$conn->setAttribute(PDO::ATTR_ERRORMODE,PDO::ERRMODE_EXCEPTION);
 	}
 	catch(PDOException $e )
 	{
 		echo "<br>abcd",$e->getMessage();
-		#echo (string)$conn,"<br>";
+
 		
 	}
 	
