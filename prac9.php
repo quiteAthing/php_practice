@@ -7,7 +7,7 @@
 	$username='root';
 	$password='';
 	$stmt="insert into articles(userid,article,title,submitted) values(:userid,:article,:title,now())";
-	$stmt2="update articles set article=:u_article,title=:u_title,lastupdate=now()";
+	$stmt2="update articles set article=:u_article,title=:u_title,lastupdate=now() where userid=1";
 	
 	try{
 		$conn=new PDO("mysql:host=$host_name;dbname=$dbname",$username,$password);
@@ -30,7 +30,7 @@
 		$pstmt->bindParam(":u_title",$u_title);
 		
 		$u_article="這是內容 from php";
-		$u_title="UPDATE from php";
+		$u_title="UPDATE from php2223";
 		
 		$pstmt->execute();
 		
