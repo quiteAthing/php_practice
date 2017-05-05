@@ -11,6 +11,9 @@
 		$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 		$result = $conn->query("select * from members");
 		echo (string)$result->fetch();
+		foreach($result->fetch() as $x){
+			echo <br>,$x;
+		}
 		
 	}
 	catch(PDOException $e )
