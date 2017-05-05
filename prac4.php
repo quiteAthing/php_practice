@@ -3,7 +3,7 @@
 	
 	$host_name="localhost";
 	$dbname="xblog";
-	$username="prac@localhost";
+	$username="prac";
 	$password="phppractice";
 	
 	try{
