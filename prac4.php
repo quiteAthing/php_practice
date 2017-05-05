@@ -7,7 +7,7 @@
 	$password="";
 	
 	try{
-		$conn=new PDO("mysql:host=$host_name;dbname=$dbname",$username,$password);
+		$conn=new PDO('mysql:host=$host_name;dbname=$dbname',$username,$password);
 		$stmt=$conn->prepare("select * from members where id=1");
 		$stmt->execute();
 		    // set the resulting array to associative
