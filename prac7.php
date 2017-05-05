@@ -14,7 +14,7 @@
 		$rq=$result->fetch(PDO::FETCH_ASSOC);
 		
 		while($row = $result->fetch()) {
-			echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+			echo "id: " ,$row;
 		}
 		foreach($rq as $x){
 			echo "<br>",$x ; 
