@@ -12,10 +12,10 @@
 		
 		$result = $conn->query("select * from members");
 		
-		while($row = $result->fetch()) {
-				echo "id: " ,$row,"<br>";
+		while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+				echo "id: " ,$row["email"],"<br>";
 		}
-		
+		$conn->db=null;
 	}
 	catch(PDOException $e )
 	{
