@@ -7,7 +7,7 @@
 	$password="phppractice";
 	
 	try{
-	$conn=new PDO("mysql:host=$host;dbname=$dbname",$username,$password);
+	$conn=new PDO("mysql:host=$host_name;dbname=$dbname",$username,$password);
 	}
 	catch(PDOException $e )
 	{
