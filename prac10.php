@@ -15,7 +15,7 @@
 	    $pstmt->bindParam(':articleid', $articleid);
 		
 
-		$articleid=4
+		$articleid=4;
 		
 		$pstmt->execute();
 		
