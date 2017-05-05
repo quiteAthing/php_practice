@@ -1,10 +1,10 @@
 <?php
 	echo "Hello";
 	
-	$host_name="127.0.0.1";
+	$host_name="localhost";
 	$dbname="xblog";
-	$username="prac";
-	$password="phppractice";
+	$username="root";
+	$password="";
 	
 	try{
 		$conn=new PDO('mysql:host=$host_name;dbname=$dbname',$username,$password);
