@@ -6,9 +6,9 @@
 	$username="root";
 	$password="";
 	
-	$conn=new PDO("mysql:host=$host_name;dbname=$dbname",$username,$password);
+	#$conn=new PDO("mysql:host=$host_name;dbname=$dbname",$username,$password);
 	
-	define("CONN",$conn);
+	#define("CONN",$conn);
 	
 	
 	
