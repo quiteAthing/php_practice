@@ -1,0 +1,101 @@
+
+
+login.php <GET>
+
+	parameters:
+		acc : 帳號，String
+		pw : 密碼，String
+		
+	回傳<JSON>：
+		{
+			loginsuccess : true|false //是否成功登入，若為false，不回傳其他資料
+			alias : String //使用者暱稱
+			notification : int //使用者是否有任何通知
+		}
+		
+		
+logout.php <GET><php自動導向>
+	parameter : none
+		
+		
+chkAccExt.php <GET>
+	
+	parameter:
+		acc: nnn
+		
+	回傳<JSON>：
+		{
+			accExt: true|false 帳號是否存在
+		}
+		
+register.php <GET><JS自動導向>
+	parameter:
+		acc:
+		pw
+	回傳：
+		{
+			regsuccess : true|false
+		}
+	
+		
+		
+article.php	<GET><完整網頁>
+	parameter:
+		articleid : 文章編號
+		as: 以何種身分進入
+			author :提供update
+			viewer :不提供update
+	回傳：完整網頁
+	
+article_make.php <GET><完整網頁>
+	parameter:
+		articleid : 文章編號，-1為新建
+
+	
+article_edit.php <GET/POST><JS自動導向>
+	parameter:
+		create : 是否為新建文章
+	請求物件:
+		{
+		articleid : int//文章id
+		title : //文章標題
+		article :	String //文章本體
+		}
+	回傳<JSON>：
+		{
+			articleid: int //更新後的文章編號，-2:失敗，除此之外接成功
+		}
+		
+article_list.php <GET><網頁片段>
+	parameter:
+		type: 選擇類別
+			author: 指令特定作者作者
+			all :所有作者
+			myself : 自己的文章(如果作者不存在或未登入，視為ALL處理並發出警告訊息)
+		rngstart:範圍起始
+			unknown_latest : 無已瀏覽範圍，給出最新的N筆
+			[int] : 上次的最後一篇的id
+		value : 作者id，以作者檢索時使用
+		amt :	回傳資料的筆數
+		reverse :順序或倒序
+
+	回傳網頁：
+		<p class="rngmark" style="display:none">[範圍最末]<p>
+		以下重複，由php自動大兩產生
+		<tr>
+		<td><a href="文章連結">文章標題</a></td>
+		<td><span>作者</span></td>
+		<td><span>發文日期</span></td>
+		<td><span>最後更新</span></td>
+		----只在作者=自己的時候出現-----
+		<td><a>編輯</a></td>
+		<td><a>刪除</a></td>
+		----/只在作者=自己的時候出現-----
+		</tr>
+		
+		
+		
+
+	
+
+	
